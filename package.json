@@ -5,24 +5,19 @@
   "description": "Sistema Web de Gestion Escolar y Control Docente",
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "next build",
     "start": "next start",
-    "postinstall": "prisma generate",
-    "db:push": "prisma db push",
-    "db:migrate": "prisma migrate dev",
-    "db:seed": "prisma db seed",
-    "db:studio": "prisma studio"
-  },
-  "prisma": {
-    "seed": "tsx prisma/seed.ts"
+    "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
-    "@prisma/client": "^6.2.0",
+    "@netlify/database": "^2.0.1",
     "bcryptjs": "^2.4.3",
+    "drizzle-orm": "^1.0.0-beta.22",
     "jose": "^5.9.6",
     "next": "^15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "server-only": "^0.0.1",
     "zod": "^3.24.1"
   },
   "devDependencies": {
@@ -31,10 +26,9 @@
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "autoprefixer": "^10.4.20",
+    "drizzle-kit": "^1.0.0-beta.22",
     "postcss": "^8.4.49",
-    "prisma": "^6.2.0",
     "tailwindcss": "^3.4.17",
-    "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }
 }
